@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bean & Leaf - Login</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #eef3e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #24352b;
+}
+
+.container {
+    width: 900px;
+    min-height: 560px;
+    display: flex;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(37,65,48,0.18);
+}
+
+/* Left side */
+.visual {
+    width: 50%;
+    background:
+        radial-gradient(circle at 70% 20%, #b9d4b4 0%, transparent 25%),
+        radial-gradient(circle at 20% 80%, #8eae8a 0%, transparent 30%),
+        linear-gradient(145deg, #315b43, #183b2a);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.visual h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    line-height: 1.1;
+}
+
+.visual p {
+    margin-top: 15px;
+    color: #d8e6d7;
+    line-height: 1.6;
+}
+
+/* Decorative leaves */
+.leaf {
+    position: absolute;
+    font-size: 100px;
+    opacity: 0.12;
+}
+
+.leaf.one {
+    right: -20px;
+    top: 70px;
+    transform: rotate(30deg);
+}
+
+.leaf.two {
+    left: -30px;
+    bottom: 30px;
+    transform: rotate(-25deg);
+}
+
+.coffee {
+    position: absolute;
+    right: 65px;
+    bottom: 65px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #f4eee4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Right side */
+.login {
+    width: 50%;
+    padding: 70px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand {
+    color: #315b43;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 8px;
+    color: #1e3026;
+}
+
+.welcome {
+    color: #7a887f;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dce4dc;
+    border-radius: 12px;
+    outline: none;
+    background: #f8faf7;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #4f805f;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(79,128,95,0.1);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.row a {
+    color: #3e7450;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #315b43;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #244936;
+    transform: translateY(-2px);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0;
+    color: #a3ada6;
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #e1e6e2;
+}
+
+.create {
+    text-align: center;
+    font-size: 13px;
+    color: #7a887f;
+}
+
+.create a {
+    color: #315b43;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media(max-width: 750px) {
+
+    .container {
+        width: 92%;
+        min-height: auto;
+    }
+
+    .visual {
+        display: none;
+    }
+
+    .login {
+        width: 100%;
+        padding: 50px 30px;
+    }
+}
+
+@media(max-width: 400px) {
+
+    .login {
+        padding: 40px 22px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="visual">
+
+        <div>
+            <h2>Fresh Beans.<br>Fresh Moments.</h2>
+
+            <p>
+                Welcome to Bean & Leaf — a cozy place
+                where every cup is made with passion.
+            </p>
+        </div>
+
+        <div class="coffee">☕</div>
+
+        <div class="leaf one">🌿</div>
+        <div class="leaf two">🍃</div>
+
+        <small>EST. 2026 · BEAN & LEAF CAFÉ</small>
+
+    </div>
+
+
+    <div class="login">
+
+        <div class="brand">Bean & Leaf</div>
+
+        <h1>Welcome back!</h1>
+
+        <p class="welcome">
+            Sign in to continue your coffee journey.
+        </p>
+
+        <form>
+
+            <div class="input-box">
+                <label>Email Address</label>
+                <input
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                >
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input
+                    type="password"
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
+
+            <div class="row">
+
+                <label>
+                    <input type="checkbox">
+                    Remember me
+                </label>
+
+                <a href="#">Forgot password?</a>
+
+            </div>
+
+            <button class="login-btn" type="submit">
+                Sign In →
+            </button>
+
+        </form>
+
+        <div class="divider">OR</div>
+
+        <div class="create">
+            Don't have an account?
+            <a href="#">Create one</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

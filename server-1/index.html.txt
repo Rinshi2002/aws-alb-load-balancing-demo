@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Aroma - Login</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, #8b5e3c 0%, transparent 30%),
+        radial-gradient(circle at 80% 80%, #4a2c20 0%, transparent 35%),
+        linear-gradient(135deg, #1c0f0a, #3b2117, #160b07);
+    color: white;
+}
+
+/* Floating circles */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(3px);
+}
+
+.circle:nth-child(1) {
+    width: 250px;
+    height: 250px;
+    top: -80px;
+    left: -60px;
+}
+
+.circle:nth-child(2) {
+    width: 180px;
+    height: 180px;
+    bottom: -50px;
+    right: -30px;
+}
+
+.circle:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    top: 15%;
+    right: 15%;
+}
+
+/* Login card */
+.login-card {
+    width: 390px;
+    padding: 45px 40px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #d7b9a2;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: #ead6c8;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 15px;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+input::placeholder {
+    color: #bda99d;
+}
+
+input:focus {
+    border-color: #d89b6b;
+    box-shadow: 0 0 12px rgba(216,155,107,0.25);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin: 10px 0 25px;
+}
+
+.options a {
+    color: #e4a674;
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #d9915b, #a95d35);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(217,145,91,0.35);
+}
+
+.signup {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #cbb8ad;
+}
+
+.signup a {
+    color: #e6a36f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 12px;
+    color: #927b70;
+}
+
+@media(max-width: 450px) {
+    .login-card {
+        width: 90%;
+        padding: 35px 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="login-card">
+
+    <div class="logo">☕</div>
+
+    <h1>Café Aroma</h1>
+    <p class="subtitle">Good coffee. Good mood. Good moments.</p>
+
+    <form>
+
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email">
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox" style="width:auto;">
+                Remember me
+            </label>
+
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit">☕ Sign In</button>
+
+    </form>
+
+    <div class="signup">
+        New to Café Aroma?
+        <a href="#">Create Account</a>
+    </div>
+
+    <div class="footer">
+        © 2026 Café Aroma · Crafted with love
+    </div>
+
+</div>
+
+</body>
+</html>
+
